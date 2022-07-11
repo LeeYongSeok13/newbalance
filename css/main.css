@@ -1,0 +1,137 @@
+.Wrap {}
+
+h2 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#top_banner {
+    background: #000;
+    color: #fff;
+    height: 25px;
+    line-height: 25px;
+}
+
+#top_banner .container {
+    justify-content: space-between;
+}
+
+#top_banner ul {
+    display: flex;
+    gap: 30px;
+}
+
+#top_banner ul li {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#header {
+    height: 75px;
+    line-height: 75px;
+    border-bottom: 1px solid #ddd;
+}
+
+#header .container {
+    justify-content: space-between;
+}
+
+#header nav>ul {
+    display: flex;
+    gap: 50px;
+}
+
+.search input[type="text"] {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 5px 0;
+    color: #000
+}
+
+.search input[type="text"]::placeholder {
+    color: #808080;
+}
+
+.search input[type="text"]:focus::placeholder {
+    opacity: 0;
+}
+
+.search button {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 21px;
+}
+
+#ad_banner {
+    padding: 20px 0;
+    background: #ddd;
+}
+
+#ad_banner .inner {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#ad_banner .inner h2 {
+    margin: 0 0 10px 0;
+}
+
+#ad_banner .inner p {
+    margin: 0 0 10px 0;
+}
+
+#ad_banner .inner i {
+    position: absolute;
+    inset: 50% auto auto 90%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    padding: 5px;
+    background: #ff0;
+    cursor: pointer;
+}
+
+#main_visual .main_slider figure {
+    position: relative;
+    height: 800px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#main_visual .main_slider .itm01 {
+    background: url('../img/main_visual01.jpg');
+}
+
+#main_visual .main_slider .itm02 {
+    background: url('../img/main_visual02.jpg');
+}
+
+#main_visual .main_slider .itm03 {
+    background: url('../img/main_visual03.jpg');
+}
+
+#main_visual .main_slider .inner {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+}
