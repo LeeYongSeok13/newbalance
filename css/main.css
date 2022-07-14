@@ -79,6 +79,7 @@ p {
     outline: none;
     border: none;
     font-size: 21px;
+    cursor: pointer;
 }
 
 #ad_banner {
@@ -116,6 +117,10 @@ p {
     background: #ff0;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#main_visual {
+    position: relative;
 }
 
 #main_visual .main_slider figure {
@@ -165,46 +170,83 @@ p {
     background: #000;
 }
 
-#model {
-    position: relative;
-    padding: 100px 0;
-    text-align: center;
-}
-
-#model h2 {
-    margin: 0 0 20px 0;
-}
-
-#model h3 {
-    margin: 0 0 50px 0;
-}
-
-#model video {
-    width: 100%;
-    height: 600px;
-    margin: 0 auto;
-}
-
-#model .controls i {
+#main_visual .angle i {
     position: absolute;
     inset: 50% auto auto 50%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
-    filter: invert(1);
+    font-size: 200px;
+    color: #fff;
     cursor: pointer;
 }
 
-#model .controls i:nth-child(1) {
+#main_visual .angle i:nth-child(1) {
+    margin: 0 0 0 -800px;
+}
+
+
+#main_visual .angle i:nth-child(2) {
+    margin: 0 0 0 800px;
+}
+
+#model {
+    position: relative;
+    height: 300px;
+    background: url('../img/bar.jpg')no-repeat fixed center center/cover;
+    text-align: center;
+    color: #fff;
+    margin: 100px 0 0 0;
+}
+
+#model .inner {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.414;
+}
+
+#model_information {
+    display: flex;
+    padding: 100px 0;
+}
+
+#model_information .left {
+    width: 50%;
+    position: relative;
+}
+
+#model_information .left video {
+    width: 100%;
+    margin: 17px 0 17px 0;
+}
+
+#model_information .left .controls i {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #fff;
+}
+
+#model_information .left .controls i:nth-child(1) {
     margin: 0 0 0 -20px;
 }
 
-#model .controls i:nth-child(2) {
+#model_information .left .controls i:nth-child(2) {
     margin: 0 0 0 20px;
 }
 
+#model_information .right {
+    width: 50%;
+}
+
+#model_information .right .inner .inner_img {
+    display: flex;
+}
+
+
 #new_shirt {
     position: relative;
-    padding: 100px 0;
+    padding: 100px;
 }
 
 #new_shirt .container {
@@ -287,6 +329,11 @@ p {
 
 #category .container h2 {
     text-align: center;
+    margin: 0 0 20px 0;
+}
+
+#category .container p {
+    text-align: center;
     margin: 0 0 50px 0;
 }
 
@@ -341,11 +388,16 @@ p {
     margin: 0 0 50px 0;
 }
 
+#category .tab_content p {
+    text-align: left;
+    margin: 0;
+}
+
 #category .tab_content h2::after {
     content: "";
     display: block;
     width: 500px;
-    height: 5px;
+    height: 3px;
     background: #ddd;
     margin: 20px 0 0 0;
 }
@@ -435,12 +487,45 @@ p {
 }
 
 #setup .container {
+    display: block;
     text-align: center;
-    gap: 50px;
 }
 
 #setup .container h2 {
     margin: 0 0 50px 0;
+}
+
+#setup .container .setup_main {
+    display: flex;
+    gap: 20px;
+}
+
+#setup .container .setup_main figure {
+    position: relative;
+    text-align: left;
+}
+
+#setup .container .setup_main figure .inner {
+    position: absolute;
+    inset: 80% auto auto 30%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+#setup .container .setup_main figure .inner h2 {
+    margin: 0 0 10px 0;
+}
+
+#setup .container .setup_main figure .inner h3 {
+    margin: 0 0 10px 0;
+}
+
+#setup .container .setup_main figure .inner p a {
+    display: inline-block;
+    padding: 2px 5px 4px 5px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
 }
 
 #nb_information {

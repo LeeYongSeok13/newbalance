@@ -11,10 +11,17 @@ $(function () {
         autoplaySpeed: 5000,
     });
 
-    $('#model .controls i:nth-child(1)').on('click', function () {
+    $('#main_visual .angle i:nth-child(1)').on('click', function () {
+        $('.main_slider').slick('slickPrev');
+    });
+    $('#main_visual .angle i:nth-child(2)').on('click', function () {
+        $('.main_slider').slick('slickNext');
+    })
+
+    $('#model_information .controls i:nth-child(1)').on('click', function () {
         $('.iu').trigger('pause');
     });
-    $('#model .controls i:nth-child(2)').on('click', function () {
+    $('#model_information .controls i:nth-child(2)').on('click', function () {
         $('.iu').trigger('play');
     })
 

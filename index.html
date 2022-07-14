@@ -49,12 +49,23 @@
                         </ul>
                     </nav>
                     <div class="search">
-                        <input type="text" placeholder="검색">
-                        <button>
-                            <i class="xi-search"></i>
-                        </button>
+                        <form action="javascript:searchAction()">
+                            <input type="text" placeholder="검색">
+                            <button>
+                                <i class="xi-search"></i>
+                            </button>
+                        </form>
+                        <script>
+                            function searchAction() {
+                                var searchValue = $('.search input').val();
+                                if (searchValue.length < 3) {
+                                    alert('3글자 이상으로 입력해주세요');
+                                } else {
+                                    alert(searchValue);
+                                }
+                            }
+                        </script>
                     </div>
-                    </nav>
                 </div>
             </section>
             <section id="ad_banner">
@@ -73,14 +84,39 @@
                     <figure class="itm02"></figure>
                     <figure class="itm03"></figure>
                 </div>
+                <div class="angle">
+                    <i class="xi-angle-left-thin"></i>
+                    <i class="xi-angle-right-thin"></i>
+                </div>
             </section>
             <section id="model">
-                <h2>NEW BALANCE 전속모델</h2>
-                <h3>아이유</h3>
-                <video src="./img/newbalance.mp4" autoplay loop muted class="iu"></video>
-                <div class="controls">
-                    <i class="xi-pause"></i>
-                    <i class="xi-play"></i>
+                <div class="inner">
+                    <h2>NEW BALANCE 전속모델</h2>
+                    <h3>아이유</h3>
+                </div>
+            </section>
+            <section id="model_information">
+                <div class="left">
+                    <video src="./img/newbalance.mp4" class="iu" autoplay loop></video>
+                    <div class="controls">
+                        <i class="xi-pause"></i>
+                        <i class="xi-play"></i>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="inner">
+                        <div class="inner_img">
+                            <figure>
+                                <img src="./img/iu01.jpg" alt="">
+                            </figure>
+                            <figure>
+                                <img src="./img/iu02.jpg" alt="">
+                            </figure>
+                            <figure>
+                                <img src="./img/iu03.jpg" alt="">
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="new_shirt">
@@ -158,6 +194,7 @@
             <section id="category">
                 <div class="container">
                     <h2>NEW BALANCE'S STYLE</h2>
+                    <p>뉴발란스가 추천하는 2022년 올해의 스타일</p>
                     <div class="tab_menu">
                         <figure class="on">
                             <img src="./img/NBheritage.jpg" alt="">
@@ -274,15 +311,33 @@
             </section>
             <section id="setup">
                 <div class="container">
-                    <figure>
-                        <img src="./img/NBcasual.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="./img/NBsummer.jpg" alt="">
-                    </figure>
-                    <figure>
-                        <img src="./img/NBkids.jpg" alt="">
-                    </figure>
+                    <h2>SET-UP</h2>
+                    <div class="setup_main">
+                        <figure>
+                            <img src="./img/NBcasual.jpg" alt="">
+                            <div class="inner">
+                                <h2>Casual</h2>
+                                <h3>캐주얼</h3>
+                                <p><a href="">더보기<i class="xi-arrow-right"></i></a></p>
+                            </div>
+                        </figure>
+                        <figure>
+                            <img src="./img/NBsummer.jpg" alt="">
+                            <div class="inner">
+                                <h2>Summer</h2>
+                                <h3>여름</h3>
+                                <p><a href="">더보기<i class="xi-arrow-right"></i></a></p>
+                            </div>
+                        </figure>
+                        <figure>
+                            <img src="./img/NBkids.jpg" alt="">
+                            <div class="inner">
+                                <h2>Kids</h2>
+                                <h3>어린이</h3>
+                                <p><a href="">더보기<i class="xi-arrow-right"></i></a></p>
+                            </div>
+                        </figure>
+                    </div>
                 </div>
             </section>
         </main>
